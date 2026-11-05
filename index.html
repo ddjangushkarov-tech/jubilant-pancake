@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Казахское ханство во второй половине XVI в.</title>
+<style>
+:root{--bg:#eef1ec;--surf:#fbfcfa;--ink:#1b2a30;--mute:#5b6b70;--line:#c9d2cb;--red:#8e1f2f;--teal:#2f5d62;--gold:#b8851f;--ok:#2e6b3f;--bad:#a3262a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131d21;--surf:#1b292e;--ink:#e8eee9;--mute:#9fb0b3;--line:#33464b;--red:#e0707f;--teal:#6fb3b8;--gold:#e3b04b;--ok:#6fcf8a;--bad:#f08a8f}}
+:root[data-theme="dark"]{--bg:#131d21;--surf:#1b292e;--ink:#e8eee9;--mute:#9fb0b3;--line:#33464b;--red:#e0707f;--teal:#6fb3b8;--gold:#e3b04b;--ok:#6fcf8a;--bad:#f08a8f}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 "Segoe UI",system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:24px 18px 48px}
+h1{font:700 clamp(26px,5vw,40px)/1.15 Georgia,"Times New Roman",serif;margin:0 0 6px}
+.sub{color:var(--mute);margin:0 0 20px}
+.tabs{display:flex;gap:8px;margin-bottom:20px;border-bottom:2px solid var(--line)}
+.tabs button{font:inherit;font-weight:600;background:none;border:0;color:var(--mute);padding:10px 16px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tabs button[aria-selected="true"]{color:var(--red);border-bottom-color:var(--red)}
+button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.track{position:relative;height:84px;margin:34px 6px 8px}
+.seg{position:absolute;top:30px;height:30px;border-radius:4px;color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap}
+.crisis{background:repeating-linear-gradient(135deg,var(--mute) 0 6px,transparent 6px 12px);border:1px solid var(--mute);color:var(--ink)}
+.s1{background:var(--teal)}.s2{background:var(--gold)}.s3{background:var(--red)}
+.mk{position:absolute;top:0;transform:translateX(-50%);width:44px;height:84px;background:none;border:0;cursor:pointer;padding:0}
+.mk i{position:absolute;left:50%;top:18px;width:2px;height:48px;background:var(--ink);transform:translateX(-50%);opacity:.5}
+.mk b{position:absolute;left:50%;top:0;transform:translateX(-50%);font:700 13px/1 Georgia,serif;color:var(--ink)}
+.mk[aria-pressed="true"] i{opacity:1;width:4px;background:var(--red)}
+.mk[aria-pressed="true"] b{color:var(--red);font-size:15px}
+.axis{display:flex;justify-content:space-between;color:var(--mute);font-size:13px;margin:0 6px 20px}
+.card{background:var(--surf);border:1px solid var(--line);border-left:6px solid var(--red);border-radius:6px;padding:18px 22px}
+.card h2{font:700 24px/1.25 Georgia,serif;margin:0 0 6px}
+.card p{margin:8px 0 0}
+.card .why{color:var(--teal);font-weight:600}
+.hint{color:var(--mute);font-size:15px;margin:0 0 6px}
+.q{background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+.prog{height:6px;background:var(--line);border-radius:3px;margin-bottom:16px}
+.prog div{height:100%;background:var(--teal);border-radius:3px;transition:width .3s}
+.q h2{font:700 clamp(21px,3.4vw,28px)/1.3 Georgia,serif;margin:0 0 16px}
+.opts{display:grid;gap:10px}
+.opts button{font:inherit;text-align:left;background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:6px;padding:12px 16px;cursor:pointer}
+.opts button:hover:not(:disabled){border-color:var(--teal)}
+.opts button.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 16%,var(--surf))}
+.opts button.bad{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 14%,var(--surf))}
+.opts button:disabled{cursor:default;color:var(--ink)}
+.fb{margin-top:16px;padding:12px 16px;border-radius:6px;background:var(--bg);border-left:5px solid var(--gold)}
+.next{margin-top:16px;font:inherit;font-weight:600;background:var(--red);color:#fff;border:0;border-radius:6px;padding:11px 24px;cursor:pointer}
+.score{font:700 56px/1 Georgia,serif;color:var(--red);margin:6px 0}
+.hide{display:none}
+@media (max-width:560px){body{font-size:16px}.seg{font-size:11px}.tabs button{padding:8px 10px}}
+@media (prefers-reduced-motion:reduce){.prog div{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Архитектура Степи: Казахское ханство, 1520–1598</h1>
+<p class="sub">От демографического кризиса к региональной державе. Выберите раздел.</p>
+<div class="tabs" role="tablist">
+<button role="tab" id="t1" aria-selected="true" data-v="v1">Хронология</button>
+<button role="tab" id="t2" aria-selected="false" data-v="v2">Викторина для аудитории</button>
+</div>
+
+<section id="v1">
+<p class="hint">Нажмите на год на шкале: откроется событие и его следствие. Цвета полос — правители.</p>
+<div class="track" id="track"></div>
+<div class="axis"><span>1515</span><span>1540</span><span>1560</span><span>1580</span><span>1600</span></div>
+<div class="card" id="card" aria-live="polite"></div>
+</section>
+
+<section id="v2" class="hide">
+<div class="q" id="quiz"></div>
+</section>
+</div>
+
+<script>
+const A=1515,B=1600,pos=y=>((y-A)/(B-A)*100)+"%";
+const segs=[
+{a:1518,b:1538,c:"crisis",t:"Кризис"},
+{a:1538,b:1580,c:"s1",t:"Хак-Назар"},
+{a:1580,b:1582,c:"s2",t:""},
+{a:1582,b:1598,c:"s3",t:"Тауекель"}];
+const ev=[
+{y:1518,t:"Смерть Касым-хана",d:"Государство теряет лидера в момент наивысшего подъёма. Начинаются усобицы султанов.",w:"Следствие: потеря улусов, население падает с 1 млн примерно до 400 тыс. человек."},
+{y:1528,t:"Хан Тахир (1523–1532)",d:"Поражения от коалиции моголов и узбеков, ногайцы вытесняют казахов из района Сарайчика.",w:"Следствие: ханство зажато между Ногайской Ордой и Могулистаном, откочёвка родов."},
+{y:1538,t:"Хак-Назар-хан приходит к власти",d:"Возврат земель от Эмбы и Приаралья до Сырдарьи, победы над ойратами и могольским ханом Абд ар-Рашидом, оформление трёх жузов.",w:"Следствие: появляется территориально-административная рамка для кочевий и ополчений."},
+{y:1555,t:"Ногайский исход",d:"Кризис Ногайской Орды при бие Исмаиле: роды, не согласные с проросийским курсом, уходят к казахам, алшыны присоединяются к ханству.",w:"Следствие: демографический и военный потенциал казахов резко растёт."},
+{y:1580,t:"Шигай-хан: стратегия коалиций",d:"Тактический союз с бухарским Абдулла-ханом II против Баба-султана ташкентского.",w:"Следствие: армия и элита сохранены, выиграно время, получен округ Африкент."},
+{y:1582,t:"Победа над Баба-султаном, Тауекель-хан",d:"Тауекель поднят на белой кошме, разрывает союз с Шейбанидами. Приток казахских племён Сибирского ханства после разгрома Кучума.",w:"Следствие: переход к агрессивной экспансии, ханство сильнейшее в регионе."},
+{y:1594,t:"Посольство Кул-Мухаммеда в Москву",d:"Цели: союз против Бухары и Кучума, «огненный бой», освобождение Ораз-Мухаммеда.",w:"Следствие: признание равным партнёром и начало регулярных дипломатических контактов."},
+{y:1598,t:"Великий поход на юг",d:"Взяты Ташкент и Самарканд, но цитадель Бухары не покорена. Тауекель тяжело ранен и умирает.",w:"Следствие: присырдарьинский регион в составе ханства, предел возможностей кочевой армии."}];
+const tr=document.getElementById("track");
+segs.forEach(s=>{const e=document.createElement("div");e.className="seg "+s.c;e.style.left=pos(s.a);e.style.width=(s.b-s.a)/(B-A)*100+"%";e.style.minWidth=s.t?"":"6px";e.textContent=s.t;tr.appendChild(e)});
+const card=document.getElementById("card");
+function show(i){
+ [...tr.querySelectorAll(".mk")].forEach((m,j)=>m.setAttribute("aria-pressed",j===i));
+ const e=ev[i];
+ card.innerHTML="<h2>"+e.y+": "+e.t+"</h2><p>"+e.d+"</p><p class=\"why\">"+e.w+"</p>";
+}
+ev.forEach((e,i)=>{const m=document.createElement("button");m.className="mk";m.style.left=pos(e.y);m.setAttribute("aria-label",e.y+" "+e.t);m.setAttribute("aria-pressed","false");m.innerHTML="<b>"+e.y+"</b><i></i>";m.onclick=()=>show(i);tr.appendChild(m)});
+show(0);
+
+const Q=[
+{q:"До какой численности, по слайдам, упало население ханства в 1520–1540-е годы?",o:["Около 700 000","Около 400 000","Около 150 000","Около 50 000"],a:1,e:"Падение с 1 000 000 до 400 000 человек: потеря улусов и откочёвка в Могулистан."},
+{q:"Кто вытеснил казахов из района Сарайчика?",o:["Ойраты","Могулы","Ногайцы","Бухарцы"],a:2,e:"Давление ногайцев с запада стало одной из причин кризиса 1520–1540-х годов."},
+{q:"Какой налог составлял 1/20 часть скота?",o:["Харадж","Зякет","Бадж","Коналга"],a:1,e:"Зякет брали со скотоводов. Харадж платили земледельцы, бадж — торговая пошлина."},
+{q:"Кто такие жатаки?",o:["Потомки Чингисхана","Судьи и ораторы","Рядовые кочевники","Обедневшие номады, перешедшие к земледелию"],a:3,e:"Жатаки — нижняя ступень иерархии, связующее звено между степью и оседлым миром."},
+{q:"Какой город был духовным центром с мавзолеем Ясави и будущей столицей при Есим-хане?",o:["Сыгнак","Сауран","Туркестан (Ясы)","Отрар"],a:2,e:"Контроль над святынями давал хану и символический капитал."},
+{q:"Годы правления Хак-Назар-хана:",o:["1518–1538","1538–1580","1580–1582","1582–1598"],a:1,e:"Сорок два года власти позволили закрепить реформы, включая деление на три жуза."},
+{q:"Какие племена пришли из Ногайской Орды и усилили ханство?",o:["Алшыны","Кереи","Найманы","Дулаты"],a:0,e:"Алшыны — основа будущего Младшего жуза. Кризис соседа стал приростом силы."},
+{q:"Кого разбили казахи в 1582 году в союзе с Абдулла-ханом II?",o:["Кучума","Абд ар-Рашида","Баба-султана ташкентского","Тахира"],a:2,e:"В награду Шигай и Тауекель получили округ Африкент."},
+{q:"Зачем посол Кул-Мухаммед ехал в Москву в 1594 году? Выберите полный ответ.",o:["Только за торговыми льготами","Союз против Бухары и Кучума, огнестрельное оружие, освобождение Ораз-Мухаммеда","Чтобы принять подданство","Чтобы объявить войну"],a:1,e:"Москва признала Тауекеля равным партнёром: началась эпоха регулярных контактов."},
+{q:"Что не удалось Тауекель-хану в походе 1598 года?",o:["Взять Ташкент","Взять Самарканд","Взять цитадель Бухары","Пересечь Сырдарью"],a:2,e:"Кочевая армия оказалась уязвима перед укреплённой цитаделью: нужны были артиллерия и осадная техника."}];
+const qz=document.getElementById("quiz");let i=0,sc=0;
+function render(){
+ if(i>=Q.length){
+  const m=sc>=9?"Отличный результат: аудитория знает архитектуру Степи.":sc>=6?"Хороший результат. Вернитесь к хронологии и разберите ошибки.":"Стоит повторить материал: начните с раздела «Хронология».";
+  qz.innerHTML="<h2>Итог</h2><div class=\"score\">"+sc+" из "+Q.length+"</div><p>"+m+"</p><button class=\"next\" id=\"again\">Пройти заново</button>";
+  document.getElementById("again").onclick=()=>{i=0;sc=0;render()};return}
+ const q=Q[i];
+ qz.innerHTML="<div class=\"prog\"><div style=\"width:"+(i/Q.length*100)+"%\"></div></div><p class=\"hint\">Вопрос "+(i+1)+" из "+Q.length+"</p><h2>"+q.q+"</h2><div class=\"opts\"></div><div id=\"fb\"></div>";
+ const box=qz.querySelector(".opts");
+ q.o.forEach((t,k)=>{const b=document.createElement("button");b.textContent=t;b.onclick=()=>pick(k);box.appendChild(b)});
+}
+function pick(k){
+ const q=Q[i],bs=[...qz.querySelectorAll(".opts button")];
+ bs.forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add("ok");else if(j===k)b.classList.add("bad")});
+ if(k===q.a)sc++;
+ document.getElementById("fb").innerHTML="<div class=\"fb\"><b>"+(k===q.a?"Верно. ":"Неверно. ")+"</b>"+q.e+"</div><button class=\"next\" id=\"nx\">"+(i===Q.length-1?"Показать итог":"Следующий вопрос")+"</button>";
+ const n=document.getElementById("nx");n.focus();n.onclick=()=>{i++;render()};
+}
+render();
+
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{
+ document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
+ document.getElementById("v1").classList.toggle("hide",b.dataset.v!=="v1");
+ document.getElementById("v2").classList.toggle("hide",b.dataset.v!=="v2");
+});
+</script>
+</body>
+</html>
